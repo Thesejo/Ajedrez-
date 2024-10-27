@@ -1,0 +1,1302 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centramos el menú */
+    gap: 1.5em; /* Espaciado entre los elementos del menú */
+}
+
+nav ul li {
+    font-size: 0.9em; /* Tamaño del texto del menú superior */
+}
+
+nav ul li a {
+    color: grey;
+    font-family: 'Courier New', Courier, monospace; /* Misma fuente que en el menú de abajo */
+    font-weight: lighter;
+    letter-spacing: 0.05em; /* Espaciado entre letras */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: white; /* Cambia a blanco al pasar el ratón */
+}
+
+
+
+
+
+.nav ul li {
+    font-size: 0.9em; /* Tamaño del texto del menú superior */
+}
+
+.nav ul li a {
+    color: grey;
+    font-family: 'Courier New', Courier, monospace; /* Misma fuente que en el menú de abajo */
+    font-weight: lighter;
+    letter-spacing: 0.05em; /* Espaciado entre letras */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: white; /* Cambia a blanco al pasar el ratón */
+}
+
+
+
+
+body {
+	font-family: Arial, sans-serif;
+}
+
+.menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	
+}
+
+.menu > li {
+	display: inline-block; /* Alinea los elementos del menú horizontalmente */
+	position: relative; /* Necesario para el posicionamiento del submenú */
+}
+
+.menu a {
+	text-decoration: none;
+	padding: 10px 15px;
+	display: block;
+	color: #333; /* Color del texto */
+}
+
+.submenu {
+	display: none; /* Oculta los submenús por defecto */
+	position: absolute;
+	left: 0;
+	top: 100%; /* Coloca el submenú justo debajo del elemento padre */
+	opacity: 0; /* Comienza invisible */
+	transform: translateY(-10px); /* Desplazamiento inicial */
+	transition: opacity 0.3s ease, transform 0.3s ease; /* Animación suave */
+	background-color: white; /* Color de fondo del submenú */
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra para el submenú */
+	z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+.menu li:hover .submenu {
+	display: block; /* Muestra el submenú al pasar el ratón */
+	opacity: 1; /* Hace visible el submenú */
+	transform: translateY(0); /* Regresa a su posición original */
+}
+
+/* Estilos para los sub-submenús */
+.submenu .submenu {
+	left: 100%; /* Posiciona el sub-submenú a la derecha del submenú */
+	top: 0; /* Alinea en la parte superior */
+	margin-left: 10px; /* Espacio entre el submenú y el sub-submenú */
+}
+
+#buscar {
+    padding: 0.5em;
+    border: none;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+#reloj {
+    font-size: 1.2em;
+    margin-left: 1em;
+}
+
+/* Menú de categorías */
+#menu-categorias ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.5em; /* Ajustado para que haya menos espacio entre los elementos */
+}
+
+#menu-categorias ul li {
+    font-size: 0.9em; /* Tamaño más pequeño para que se vea compacto */
+}
+
+#menu-categorias ul li a {
+    color: grey;
+    font-family: 'Courier New', Courier, monospace; /* Misma fuente que en el menú superior */
+    font-weight: lighter;
+    letter-spacing: 0.05em; /* Mismo espaciado entre letras */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#menu-categorias ul li a:hover {
+    color: black;
+}
+
+/* Ajuste del espaciado y tamaño del menú */
+#menu-categorias ul {
+    padding: 0.5em 0; /* Reduce el padding para compactar más */
+}
+
+section {
+    padding: 2em;
+}
+
+#productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+.producto {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    text-align: center;
+    flex: 1 1 calc(33.333% - 2em); /* 3 columnas en todas las pantallas */
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#contacto {
+    background-color: #f8f8f8;
+    padding: 2em;
+    text-align: center;
+}
+
+/* Responsive para tablets y móviles */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        margin-top: 1em;
+    }
+
+    #productos {
+        justify-content: space-between;
+    }
+
+    .producto {
+        flex: 1 1 calc(33.333% - 1em); /* 3 columnas también en tablets */
+    }
+
+    #menu-categorias ul {
+        gap: 1em; /* Ajuste del espaciado para tablets */
+    }
+
+    #menu-categorias ul li {
+        font-size: 0.8em; /* Tamaño de texto más pequeño para tablets */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    #buscar {
+        width: 100%;
+        margin: 1em 0;
+    }
+
+    #productos {
+        gap: 1em;
+    }
+
+    .producto {
+        flex: 1 1 calc(33.333% - 1em); /* 3 columnas en móviles */
+    }
+
+    #menu-categorias ul {
+        gap: 0.5em; /* Espaciado más pequeño para móviles */
+    }
+
+    #menu-categorias ul li {
+        font-size: 0.7em; /* Tamaño más pequeño en móviles */
+    }
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background: #ffffff;
+	
+}
+body
+{
+	background-image: url(../img/1pm.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+
+
+}
+
+
+.background-overlay {
+	background-image: linear-gradient(-90deg,  #e6e6c1e1, #ffffffa1);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+  }
+	
+
+
+
+
+.mes h1 {
+	margin-top: 50px;
+	font-size: 70px ;
+}
+	
+.mes p {
+	font-size: 28px ;
+}
+
+	.nav-ali{
+	
+	  margin-top: -8px;
+	  background-image: linear-gradient(-90deg,  #d33f12bb, #e6db3c);
+	  
+	  box-shadow: 2px 2px 5px #000;
+	  opacity: 0.9;
+	
+	  
+	}
+	
+	.nav-ali ul{
+	  list-style-type: none;
+	  
+	  padding: 1px;
+	margin: 0px;
+	overflow: hidden;
+	
+	
+	
+	  
+	}
+	
+	.nav-ali a {
+	  color: azure;
+	text-decoration: none;
+	padding: 15px;
+	display: block;
+	
+	text-align: left;
+	}
+	
+		
+	.btna > a {
+	
+text-align: right;
+		
+		color: rgb(0, 0, 0);
+		transition: all 0.3s ease 0;
+	
+		font-family: 'Agbalumo', serif;
+    font-weight:bolder;
+	
+	width: 30%;
+	margin-left:70% ;
+
+
+
+	
+		
+		
+	}
+			
+
+
+		
+	.nav-ali .btnr:hover {
+
+		
+		color: rgb(49, 78, 245);
+		transition: all 0.3s ease 0;
+		
+		
+		
+	
+		
+		
+	}
+
+
+
+
+
+	  
+	
+	
+
+
+	.nav-ali a:hover {
+		color: rgb(41, 34, 29);
+	}
+	
+	.nav-ali li {
+	  float: left;
+	}
+	
+	
+	
+	
+
+	
+
+
+.wrap{
+	max-width: 100%;
+		/* max-width: 1100px;*/
+	width: 100%;
+	margin: auto;
+	box-shadow: 2px 2px 5px #000;
+
+
+	
+}
+
+
+.wrap > h1{
+	font-family: 'Playfair Display SC', serif;
+	color: #000000;
+	/* color: #090a0a;*/
+	font-weight:lighter;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 5px 0px;
+	
+}
+
+
+
+.wrap .store-wrapper .mes {
+	
+	margin-top: -8px;
+	
+	color: #000000;
+
+	opacity: 0.9;
+
+	width: 100%;
+	margin: 10px;
+	padding: 15px ;
+	text-align: left;
+	
+
+  /* sombra de  las tragetas pero su letra */
+
+
+  }
+  
+ .store-wrapper .mes  {
+	/* letra gorda */
+	font-family: 'Agbalumo', serif;
+    font-weight:bolder;
+
+	
+}
+
+
+.store-wrapper .mes > p {
+	font-family: 'Roboto', serif;
+    font-weight:lighter;
+	
+}
+
+
+/* .wrap > h1:after{
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: #636060;
+	margin: 20px 0;
+}
+*/
+.store-wrapper{
+	display: flex;
+	flex-wrap: wrap;
+
+	
+
+}
+
+
+
+
+
+
+
+
+
+
+.store-wrapper { 
+	
+	/* ancho del caja */
+	text-decoration: none; /* Quitar subrayado predeterminado de los enlaces */
+	color: #000000; /* Color del texto del enlace */
+	font-weight: bold; /* Peso de la fuente en negrita */
+	font-family: Arial, sans-serif; /* Fuente del texto del enlace */
+	padding: 10px; /* Espaciado interno alrededor del texto del enlace */
+	 /* Color de fondo del enlace */
+	
+	box-shadow: 2px 2px 5px #000;
+	opacity: 0.9;
+	/* */
+	border-radius: 0px; /* Bordes redondeados */
+	margin-right: 0px; /* Margen derecho entre enlaces */  
+	width: 100%;
+	
+
+	
+	  }
+
+.store-wrapper .menu { 
+	/* sombra de  las tragetas pero su letra */
+
+	
+	width: 97%;
+	
+	/* ancho del caja */
+	text-decoration: none; /* Quitar subrayado predeterminado de los enlaces */
+	color: #000000; /* Color del texto del enlace */
+	font-weight: bold; /* Peso de la fuente en negrita */
+	font-family: Arial, sans-serif; /* Fuente del texto del enlace */
+	padding: 10px; /* Espaciado interno alrededor del texto del enlace */
+	 /* Color de fondo del enlace */
+
+
+	/* */
+	border-radius: 1px; /* Bordes redondeados */
+	margin-right: 0px; /* Margen derecho entre enlaces */  
+	  }
+ 
+
+	  .card-container{
+
+	width: 220px;
+	align-items: center;
+	margin-left: 50px;
+	  }
+
+
+	  .card-containerj{
+	
+		width: 220px;
+		margin-left: 90px;
+	
+		  }
+
+		  .div-redes{
+		 justify-content: center;
+		 font-family: 'Agbalumo', serif;
+		 font-weight:bolder;
+		
+		 width: 600px;
+		  }
+	
+
+
+	  
+
+
+
+
+
+
+
+
+
+
+
+
+.rf .img-fluid  {
+  
+
+ 
+  
+	border-radius: 50%;
+	aspect-ratio: 1/1 ;
+	width:150px ;
+	object-fit: cover;
+	box-shadow: 0 0 10px   rgb(91, 207, 24); 
+  
+  margin: 20px 30px ; /* espacoio entre la imagen y h3 */
+  
+  
+  
+  transition: .2s;
+  } 
+  
+  
+  
+  
+  
+  .rf .img-fluid:hover {
+  
+  box-shadow: 0 0 12px   rgb(252, 21, 221);  
+  
+  
+  
+  
+  }  
+  
+  
+  
+  .dswf .img-fluid {
+	
+	border-radius: 50%;
+	aspect-ratio: 1/1 ;
+	width:150px ;
+	object-fit: cover;
+	box-shadow: 0px 0px 6px  rgb(0, 0, 0);
+  
+  margin: 20px 30px ; /* espacoio entre la imagen y h3 */
+  
+  
+  
+  transition: .2s;
+  } 
+  
+  
+  .dswf .img-fluid:hover {
+
+	box-shadow: 0 0 12px  rgb(0, 60, 255); 
+	
+	
+	
+	
+	}    
+
+
+
+/* 
+
+
+
+.category_list{
+	display: flex;
+	flex-direction: column;
+	width: 18%;
+}
+
+
+
+
+
+
+botones naranja ============.category_list .category_item{
+	display: block;
+	width: 90%;
+	padding: 15px 0;
+	margin-bottom: 20px;
+	background: #E84C3D;
+
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+*/
+
+.store-wrapper {
+	justify-content:center ;
+	margin: 2px;
+}
+
+
+ul.menu_1 {
+display: flex;
+flex-wrap:wrap ;
+justify-content:center ;
+
+
+}
+
+
+
+ul.menu_1>li {
+display: inline-block;
+	/* ancgho de las letras*/
+padding: 0px 4px;
+
+
+}
+
+ul.menu_1>li>a {
+	display: inline-block;
+	padding: 0px 10px;
+	transition: .3s;
+	color: #000000;
+	text-decoration: none;
+	font-size: 22px;
+	margin-bottom: 10px;
+	font-family: 'Noto Serif Japonés', serif;
+    font-weight:lighter;
+
+
+	}
+
+	 ul.menu_1>li>a:hover {
+		
+		
+		color: #000000;
+		
+		
+		}
+	
+
+
+
+	
+  
+	
+
+
+
+
+
+
+
+
+
+
+
+
+.category_list .ct_item-active{
+	background: #101011;
+}
+
+
+
+
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+	
+	
+  }
+
+  .sto{
+	display: flex;
+	flex-wrap: wrap;
+
+} 
+
+.sto a{
+	display: block;
+	width: 100%;
+	padding: 8px 0;
+
+
+background-image: linear-gradient(-90deg,  #d33f12bb, #e6db3c);
+
+	color: #000000;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+
+  .card {
+	
+	min-height: 200px;
+	font-weight: bold;
+	padding: 0px;
+	position: relative;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center center;
+
+	/* Flexbox */
+	/* width: calc(33.33% - 20px); */
+}
+
+.card .textos {
+	height: 100%;
+	
+	/* Flebox */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	/* Grid */
+	/* display: grid;
+	grid-template-rows: 1fr auto; */
+}
+
+
+
+	
+	/* .imgs {
+
+
+
+	object-fit:cover;
+	
+	}*/
+	/* width: calc(33.33% - 20px); */
+
+
+.products-list{
+	margin-top: 25px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+
+
+}
+
+
+.products-list .product-item{
+	width: 100%;
+
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 5px #000;
+
+
+		
+font-family:' DM Serif Display ', serif ;
+
+	
+	flex-direction: column;
+	align-items: center;
+	align-self: flex-start;
+
+	transition: all .4s;
+}
+
+.products-list .product-item img{
+	width: 100%;
+}
+
+.products-list .product-item a{
+	display: block;
+	width: 100%;
+	padding: 8px 0;
+	background: #2D3E50;
+
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+
+
+.sto{
+	display: flex;
+	flex-wrap: wrap;
+
+	
+
+	margin-bottom: 25px;
+
+
+	flex-direction: column;
+	align-items: center;
+	align-self: flex-start;
+
+	transition: all .4s;
+
+
+
+
+} 
+
+.tex{
+	
+	
+	
+	display: block;
+	width: 100%;
+	padding: 8px 0;
+	
+      color: #fff;
+	text-align: center;
+	text-decoration: none;
+	
+} 
+
+
+
+	       
+  @media screen and (min-width: 5120px) {
+	.respos {
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(8, 1fr);
+	gap: 20px;
+}
+	}
+
+
+
+
+@media screen and (max-width: 5120px) {
+	.respos{
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 20px;
+}
+	       }
+	       
+
+	       
+
+@media screen and (max-width: 1920px) {
+	.respos {
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 20px;
+}
+	       }
+	       
+	    
+@media screen and (max-width: 1280px) {
+	.respos {
+		
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 20px;
+}
+}   
+
+@media screen and (max-width: 1024px) {
+	
+	.respos {
+		
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
+}
+
+
+
+}
+
+@media screen and (max-width: 991px) {
+	.respos {
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card-container{
+
+	width: 220px;
+	align-items: center;
+	margin-left: 30%;
+	  }
+
+
+	  .card-containerj{
+
+		width: 220px;
+		margin-left: 30%;
+		
+	
+		  }
+
+		  .div-redes{
+		
+	
+		align-items: center;
+		 width: 600px;
+		  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+	.respos {
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.card-container{
+	
+	width: 220px;
+	align-items: center;
+	margin-left: 22%;
+	
+	  }
+
+
+	  .card-containerj{
+		
+		width: 220px;
+		margin-left: 22%;
+		
+		
+	
+		  }
+
+		  .card-containerj .soyh {
+
+			font-size: 20px;
+	
+		
+			  }
+		  
+			  	  
+	  .card-container .soyh {
+
+		font-size: 20px;
+	
+	
+		  }
+	  .card-containerj .soyhp {
+
+		font-size: 18px;
+		
+	
+		  }
+
+		  .div-redes{
+		
+
+		align-items: center;
+		 width: 400px;
+		 font-size: 22px;
+	
+		 font-family: 'Agbalumo', serif;
+		 font-weight:bolder;
+	
+		  }
+
+		  
+
+.mes h1 {
+	margin-top: 50px;
+	font-size: 40px ;
+}
+	
+.mes p {
+	font-size: 22px ;
+}
+	
+}
+
+@media screen and (max-width: 600px) {
+	.respos {
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+	
+}
+
+@media screen and (max-width: 400px) {
+	.respos {
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	
+}
+	
+}
+
+
+@media screen and (max-width: 361px) {
+	.respos {
+	/* Flexbox */
+	/* width: 70%;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px; */
+
+	/* Grid */
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+	
+}
+.mes p {
+	font-size: 18px ;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE aarregla aqui  @media screen and (max-width: 5120px) {
+	
+		.products-list .product-item{
+			width: 20%;
+		}
+} */
+
+
+
+
+
+/* @media screen and (max-width: 5120px){
+	
+	.products-list .product-item {
+
+		width: 30.3%;
+	} 
+		
+	
+}
+
+@media screen and (max-width: 5119px){
+	.category_list,
+	.products-list{
+		width: 100%;
+	}
+
+	.category_list{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.category_list .category_item{
+		align-self: flex-start;
+		width: 15%;
+		font-size: 14px;
+	}
+
+	.products-list .product-item{
+		margin-left: 4.5%;
+	}
+
+	.products-list .product-item:nth-child(3n+1){
+		margin-left: 1px;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.category_list{
+		flex-direction: column;
+	}
+	.category_list .category_item{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 600px){
+
+	.products-list .product-item{
+		width: 47.5%;
+	}
+
+	.products-list .product-item:nth-child(3n+1){
+		margin-left: 4.5%;
+	}
+
+	.products-list .product-item:nth-child(2n+1){
+		margin-left: 0px;
+	}
+
+}
+
+@media screen and (max-width: 350px){
+	.products-list .product_item{
+		width: 100%;
+		margin-left: 0px;
+	}
+}
+
+
+
+	       
+
+	
+
+
+
+
+
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
