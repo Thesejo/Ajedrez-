@@ -38,30 +38,69 @@
             margin: 0 auto;
         }
         .product {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1rem;
-            margin: 1rem 0;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #f9f9f9;
         }
         .product img {
-            width: 100px;
-            height: 500px;
+            width: 100%;
+            max-width: 250px; /* Tamaño máximo de la imagen */
+            height: auto;
             border-radius: 8px;
+            display: block;
+            margin: 0 auto;
         }
         .product-details {
             flex: 1;
             padding: 0 1rem;
         }
-        .footer {
+        .product h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+        .product p {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Diseño responsivo */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columnas por defecto */
+            gap: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+            }
+        }
+
+        @media (min-width: 900px) {
+            .products-grid {
+                grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas grandes */
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(6, 1fr); /* 6 columnas en pantallas muy grandes */
+            }
+        }
+
+        footer {
             background-color: #333;
             color: #fff;
             padding: 1rem;
             text-align: center;
             margin-top: 2rem;
         }
+
     </style>
 </head>
 <body>
@@ -71,6 +110,11 @@
     </header>
 
     <nav class="navbar">
+        <a href="#samsung">Samsung Galaxy A15</a>
+        <a href="#sony">Productos Sony</a>
+        <a href="#soporte">Soporte</a>
+    </nav>
+<nav class="navbar">
         <a href="#samsung">Samsung Galaxy A15</a>
         <a href="#sony">Productos Sony</a>
         <a href="#soporte">Soporte</a>
@@ -116,11 +160,57 @@
             </div>
         </div>
     </div>
+    <div class="container" id="samsung">
+        <h2>Samsung Galaxy A15</h2>
+        <div class="products-grid">
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Galaxy A15 5G">
+                <div class="product-details">
+                    <h3>Galaxy A15 5G 128GB</h3>
+                    <p><strong>Precio:</strong> $155.00 (antes $189)</p>
+                    <p>Cámara de 50MP, Procesador Octa-core, Carga Super Rápida</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Galaxy A15">
+                <div class="product-details">
+                    <h3>Galaxy A15 128GB</h3>
+                    <p><strong>Precio:</strong> $140.00 (antes $169)</p>
+                    <p>Cámara de 50MP, Procesador Octa-core, Carga Rápida</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer class="footer">
+    <div class="container" id="sony">
+        <h2>Productos Sony</h2>
+        <p>Hasta 35% de descuento y envío gratis en pedidos que superen los $50</p>
+        <div class="products-grid">
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Audífonos Sony">
+                <div class="product-details">
+                    <h3>Audífonos Sony</h3>
+                    <p><strong>Precio:</strong> $75.00</p>
+                    <p>Calidad de sonido superior y diseño ergonómico</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/250" alt="Sistema de Audio">
+                <div class="product-details">
+                    <h3>Sistema de Audio Sony</h3>
+                    <p><strong>Precio:</strong> $120.00</p>
+                    <p>Potencia de sonido en un sistema compacto</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
         <p>&copy; 2024 Tienda Combinada. Todos los derechos reservados.</p>
         <p>Sitios oficiales: Samsung Panamá, Sony Panamá</p>
     </footer>
 
 </body>
 </html>
+
+    
