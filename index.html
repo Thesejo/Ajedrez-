@@ -1,66 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reparación de Teléfonos</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samsung & Sony Tienda Combinada</title>
+    <style>
+        /* Estilos básicos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background-color: #f1f1f1;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .product img {
+            width: 100px;
+            height: auto;
+            border-radius: 8px;
+        }
+        .product-details {
+            flex: 1;
+            padding: 0 1rem;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- Encabezado -->
-  <header>
-    <div class="logo">FixMyPhone</div>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#servicios">Servicios</a>
-      <a href="#precios">Precios</a>
-      <a href="#testimonios">Testimonios</a>
-      <a href="#contacto">Contacto</a>
+    <header>
+        <h1>Tienda Combinada - Samsung y Sony</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="#samsung">Samsung Galaxy A15</a>
+        <a href="#sony">Productos Sony</a>
+        <a href="#soporte">Soporte</a>
     </nav>
-    <button class="cta">Cotiza tu reparación</button>
-  </header>
 
-  <!-- Sección Principal -->
-  <section id="inicio" class="hero">
-    <h1>Reparación de Teléfonos Rápida y Confiable</h1>
-    <p>Reparamos tu teléfono en minutos para que vuelvas a estar conectado.</p>
-    <button class="cta">Reserva Ahora</button>
-  </section>
-
-  <!-- Sección de Servicios -->
-  <section id="servicios">
-    <h2>Nuestros Servicios</h2>
-    <div class="service">
-      <h3>Reparación de pantalla</h3>
-      <p>Arreglamos pantallas rotas en el mismo día.</p>
+    <div class="container" id="samsung">
+        <h2>Samsung Galaxy A15</h2>
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Galaxy A15 5G">
+            <div class="product-details">
+                <h3>Galaxy A15 5G 128GB</h3>
+                <p><strong>Precio:</strong> $155.00 (antes $189)</p>
+                <p>Cámara de 50MP, Procesador Octa-core, Carga Super Rápida</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Galaxy A15">
+            <div class="product-details">
+                <h3>Galaxy A15 128GB</h3>
+                <p><strong>Precio:</strong> $140.00 (antes $169)</p>
+                <p>Cámara de 50MP, Procesador Octa-core, Carga Rápida</p>
+            </div>
+        </div>
     </div>
-    <div class="service">
-      <h3>Cambio de batería</h3>
-      <p>Recupera la vida útil de tu batería.</p>
-    </div>
-    <!-- Más servicios aquí -->
-  </section>
 
-  <!-- Sección de Contacto -->
-  <section id="contacto">
-    <h2>Contáctanos</h2>
-    <form>
-      <input type="text" placeholder="Nombre" required>
-      <input type="email" placeholder="Correo Electrónico" required>
-      <textarea placeholder="Descripción del problema"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2024 FixMyPhone</p>
-    <div class="social-icons">
-      <a href="#">Facebook</a>
-      <a href="#">Instagram</a>
-      <a href="#">WhatsApp</a>
+    <div class="container" id="sony">
+        <h2>Productos Sony</h2>
+        <p>Hasta 35% de descuento y envío gratis en pedidos que superen los $50</p>
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Audífonos Sony">
+            <div class="product-details">
+                <h3>Audífonos Sony</h3>
+                <p><strong>Precio:</strong> $75.00</p>
+                <p>Calidad de sonido superior y diseño ergonómico</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="https://via.placeholder.com/100" alt="Sistema de Audio">
+            <div class="product-details">
+                <h3>Sistema de Audio Sony</h3>
+                <p><strong>Precio:</strong> $120.00</p>
+                <p>Potencia de sonido en un sistema compacto</p>
+            </div>
+        </div>
     </div>
-  </footer>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tienda Combinada. Todos los derechos reservados.</p>
+        <p>Sitios oficiales: Samsung Panamá, Sony Panamá</p>
+    </footer>
 
 </body>
 </html>
