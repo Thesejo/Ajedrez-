@@ -1,185 +1,33 @@
-
-/* Estilos generales */
+/* Ejemplo de estilos básicos */
 body {
-    font-family: Arial, sans-serif;
-    background-color: white;
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
 }
-
-h1 {
-    margin: 0;
-    font-size: 1.5em;
+.hero {
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
 }
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center; /* Centramos el menú */
-    gap: 1.5em; /* Espaciado entre los elementos del menú */
+.service {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 10px;
 }
-
-nav ul li {
-    font-size: 0.9em; /* Tamaño del texto del menú superior */
-}
-
-nav ul li a {
-    color: grey;
-    font-family: 'Courier New', Courier, monospace; /* Misma fuente que en el menú de abajo */
-    font-weight: lighter;
-    letter-spacing: 0.05em; /* Espaciado entre letras */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: white; /* Cambia a blanco al pasar el ratón */
-}
-
-#buscar {
-    padding: 0.5em;
-    border: none;
-    border-radius: 5px;
-    margin-right: 1em;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-}
-
-#reloj {
-    font-size: 1.2em;
-    margin-left: 1em;
-}
-
-/* Menú de categorías */
-#menu-categorias ul {
-    list-style: none;
-    padding: 0;
-    margin: 1em 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5em; /* Ajustado para que haya menos espacio entre los elementos */
-}
-
-#menu-categorias ul li {
-    font-size: 0.9em; /* Tamaño más pequeño para que se vea compacto */
-}
-
-#menu-categorias ul li a {
-    color: grey;
-    font-family: 'Courier New', Courier, monospace; /* Misma fuente que en el menú superior */
-    font-weight: lighter;
-    letter-spacing: 0.05em; /* Mismo espaciado entre letras */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-#menu-categorias ul li a:hover {
-    color: black;
-}
-
-/* Ajuste del espaciado y tamaño del menú */
-#menu-categorias ul {
-    padding: 0.5em 0; /* Reduce el padding para compactar más */
-}
-
-section {
-    padding: 2em;
-}
-
-#productos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    justify-content: space-between;
-}
-
-.producto {
-    background-color: #f4f4f4;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1em;
-    text-align: center;
-    flex: 1 1 calc(33.333% - 2em); /* 3 columnas en todas las pantallas */
-}
-
-.producto img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-
-#contacto {
-    background-color: #f8f8f8;
-    padding: 2em;
-    text-align: center;
-}
-
-/* Responsive para tablets y móviles */
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav ul {
-        justify-content: center;
-        margin-top: 1em;
-    }
-
-    #productos {
-        justify-content: space-between;
-    }
-
-    .producto {
-        flex: 1 1 calc(33.333% - 1em); /* 3 columnas también en tablets */
-    }
-
-    #menu-categorias ul {
-        gap: 1em; /* Ajuste del espaciado para tablets */
-    }
-
-    #menu-categorias ul li {
-        font-size: 0.8em; /* Tamaño de texto más pequeño para tablets */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.2em;
-    }
-
-    #buscar {
-        width: 100%;
-        margin: 1em 0;
-    }
-
-    #productos {
-        gap: 1em;
-    }
-
-    .producto {
-        flex: 1 1 calc(33.333% - 1em); /* 3 columnas en móviles */
-    }
-
-    #menu-categorias ul {
-        gap: 0.5em; /* Espaciado más pequeño para móviles */
-    }
-
-    #menu-categorias ul li {
-        font-size: 0.7em; /* Tamaño más pequeño en móviles */
-    }
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 20px;
 }
