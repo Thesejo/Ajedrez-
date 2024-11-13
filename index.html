@@ -1,89 +1,66 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tienda de Ajedrez</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reparación de Teléfonos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <h1>Ajedrez</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#tienda">Tienda</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-        <div class="header-right">
-            <input type="text" id="buscar" placeholder="Buscar sortijas...">
-            <div id="reloj"></div>
-        </div>
-    </header>
+  <!-- Encabezado -->
+  <header>
+    <div class="logo">FixMyPhone</div>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#precios">Precios</a>
+      <a href="#testimonios">Testimonios</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="cta">Cotiza tu reparación</button>
+  </header>
 
-    <!-- Menú de categorías -->
-    <section id="menu-categorias">
-        <ul>
-            <li><a href="#anillos">Anillos</a></li>
-            <li><a href="#relojes">Relojes</a></li>
-            <li><a href="#pulseras">Pulseras</a></li>
-            <li><a href="#collares">Collares</a></li>
-            <li><a href="#carteras">Carteras</a></li>
-        </ul>
-    </section>
+  <!-- Sección Principal -->
+  <section id="inicio" class="hero">
+    <h1>Reparación de Teléfonos Rápida y Confiable</h1>
+    <p>Reparamos tu teléfono en minutos para que vuelvas a estar conectado.</p>
+    <button class="cta">Reserva Ahora</button>
+  </section>
 
-    <section id="tienda">
-        <h2>Artículos</h2>
-        <div id="productos">
-            <div class="producto">
-                <img src="t.jpeg" alt="Sortija 1">
-                <p>Grcais</p>
-            </div>
-            <div class="producto">
-                <img src="a.png" alt="Sortija 2">
-                <p>por ser</p>
-            </div>
-            <div class="producto">
-                <img src="f.jpg" alt="Sortija 3">
-                <p>la chica </p>
-            </div>
-            <div class="producto">
-                <img src="m.jpg" alt="Sortija 4">
-                <p>mas hermosa </p>
-            </div>
-            <div class="producto">
-                <img src="t.jpeg" alt="Sortija 5">
-                <p>que acompañara </p>
-            </div>
-            <div class="producto">
-                <img src="a.png" alt="Sortija 6">
-                <p>esta hermosa</p>
-            </div>
-            <div class="producto">
-                <img src="f.jpg" alt="Sortija 7">
-                <p>y increíble</p>
-            </div>
-            <div class="producto">
-                <img src="m.jpg" alt="Sortija 8">
-                <p>vida </p>
-            </div>
-            <div class="producto">
-                <img src="m.jpg" alt="Sortija 9">
-                <p>i love you ana mi furtura esposa </p>
-            </div>
-        </div>
-    </section>
+  <!-- Sección de Servicios -->
+  <section id="servicios">
+    <h2>Nuestros Servicios</h2>
+    <div class="service">
+      <h3>Reparación de pantalla</h3>
+      <p>Arreglamos pantallas rotas en el mismo día.</p>
+    </div>
+    <div class="service">
+      <h3>Cambio de batería</h3>
+      <p>Recupera la vida útil de tu batería.</p>
+    </div>
+    <!-- Más servicios aquí -->
+  </section>
 
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Correo: Gracias Dios. Ana y José forever</p>
-    </section>
+  <!-- Sección de Contacto -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <form>
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo Electrónico" required>
+      <textarea placeholder="Descripción del problema"></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
 
-    <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2024 FixMyPhone</p>
+    <div class="social-icons">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
 
 </body>
-  </html>
+</html>
