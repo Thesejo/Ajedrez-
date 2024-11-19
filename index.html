@@ -1,51 +1,156 @@
-
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página Responsiva</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajedrez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem;
+            background-color: #f1f1f1;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .product {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 1rem;
+            background-color: #fff;
+            text-align: center;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 8px;
+            margin: 0 auto;
+            display: block;
+        }
+        .product-details {
+            margin-top: 1rem;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 100%;
+            background-color: #f1f1f1;
+            padding-top: 2rem;
+            box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .side-menu h3 {
+            text-align: center;
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        .side-menu a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        .side-menu a:hover {
+            background-color: #ddd;
+        }
+    </style>
 </head>
 <body>
-  <!-- Menú -->
-  <header>
-    <button class="menu-toggle">☰</button>
-    <nav>
-      <ul class="menu">
-        <li><a href="#reparacion">Reparación de pantalla</a></li>
-        <li><a href="#soporte">Soporte</a></li>
-        <li><a href="#web">Creación de páginas web</a></li>
-        <li><a href="#venta">Venta de artículos</a></li>
-        <li><a href="#contacto">Contáctanos</a></li>
-      </ul>
+
+    <header>
+        <h1>Ajedrez</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="#producto1">Samsung Galaxy A15</a>
+        <a href="#producto2">Productos Sony</a>
+        <a href="#soporte">Soporte</a>
+        <a href="#contacto">Contáctanos</a>
     </nav>
-  </header>
 
-  <!-- Galería de imágenes -->
-  <main>
-    <div class="gallery">
-      <div class="item"><img src="image1.jpg" alt="Imagen 1"></div>
-      <div class="item"><img src="image2.jpg" alt="Imagen 2"></div>
-      <div class="item"><img src="image3.jpg" alt="Imagen 3"></div>
-      <div class="item"><img src="image4.jpg" alt="Imagen 4"></div>
-      <div class="item"><img src="image5.jpg" alt="Imagen 5"></div>
-      <div class="item"><img src="image6.jpg" alt="Imagen 6"></div>
+    <div class="container" id="producto1">
+        <h2>Samsung Galaxy A15</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="galaxyA15_5g.png" alt="Galaxy A15 5G">
+                <div class="product-details">
+                    <h3>Galaxy A15 5G 128GB</h3>
+                    <p><strong>Precio:</strong> $155.00 (antes $189)</p>
+                    <p>Cámara de 50MP, Procesador Octa-core, Carga Super Rápida</p>
+                </div>
+            </div>
+            <div class="product">
+                <img src="galaxyA15_128gb.png" alt="Galaxy A15">
+                <div class="product-details">
+                    <h3>Galaxy A15 128GB</h3>
+                    <p><strong>Precio:</strong> $140.00 (antes $169)</p>
+                    <p>Cámara de 50MP, Procesador Octa-core, Carga Rápida</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </main>
 
-  <!-- Pie de página -->
-  <footer>
-    <p>© 2024 Ajedrez. AJLG</p>
-  </footer>
+    <!-- Agrega más productos con diferentes ids aquí -->
 
-  <script src="scripts.js"></script>
+    <div class="side-menu">
+        <h3>Servicios</h3>
+        <a href="#reparacion">Reparación de pantalla</a>
+        <a href="#soporte">Soporte</a>
+        <a href="#creacion">Creación de páginas web</a>
+        <a href="#venta">Venta de artículos</a>
+        <a href="#contacto">Contáctanos</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Ajedrez.</p>
+        <p>AJLG</p>
+    </footer>
+
 </body>
 </html>
-
-
-
-
-
-
