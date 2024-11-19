@@ -82,6 +82,25 @@
             display: none;
         }
 
+        /* Estilos para los enlaces de filtrado */
+        .filter-links {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .filter-links a {
+            font-size: 18px;
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+        }
+
+        .filter-links a:hover {
+            color: #555;
+            border-bottom: 2px solid #555;
+        }
+
         /* Reparación de teléfonos y computadoras */
         .repair-categories {
             display: flex;
@@ -119,6 +138,33 @@
             border: 1px solid #ddd;
         }
 
+        /* Contáctanos con imagen de Instagram */
+        .contact-info {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-info a {
+            font-size: 20px;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-info a:hover {
+            color: #555;
+            border-bottom: 2px solid #555;
+        }
+
+        .instagram-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-top: 20px;
+            object-fit: cover;
+            border: 2px solid #ddd;
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -146,6 +192,11 @@
     <section id="venta" class="section">
         <h2>Venta de Artículos</h2>
         <p>Explora nuestros productos por categoría.</p>
+        <div class="filter-links">
+            <a href="#" onclick="filterProducts('electronics')">Electrónicos</a>
+            <a href="#" onclick="filterProducts('accessories')">Accesorios</a>
+            <a href="#" onclick="filterProducts('all')">Todos</a>
+        </div>
         <div class="products-grid">
             <div class="product category-electronics hidden">
                 <img src="product1.jpg" alt="Producto 1">
@@ -168,9 +219,6 @@
                 <p>Descripción del producto</p>
             </div>
         </div>
-        <button onclick="filterProducts('electronics')">Electrónicos</button>
-        <button onclick="filterProducts('accessories')">Accesorios</button>
-        <button onclick="filterProducts('all')">Todos</button>
     </section>
 
     <!-- Sección de Reparaciones -->
@@ -197,9 +245,15 @@
             <textarea placeholder="Tu mensaje" required></textarea>
             <button type="submit">Enviar</button>
         </form>
+        <div class="contact-info">
+            <p>Conéctate con nosotros en Instagram:</p>
+            <a href="https://www.instagram.com/tu_instagram/" target="_blank">
+                <img class="instagram-img" src="instagram-profile.jpg" alt="Instagram Profile">
+            </a>
+        </div>
     </section>
 
-    <!-- Sección Acerca de Nosotros -->
+    <!-- Sección Acerca de Nosotros (Ahora Contáctanos) -->
     <section id="acerca" class="section">
         <h2>Acerca de Nosotros</h2>
         <p>Somos una empresa especializada en la reparación de dispositivos electrónicos y la venta de artículos de alta calidad.</p>
