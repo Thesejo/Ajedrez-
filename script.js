@@ -24,3 +24,12 @@ function actualizarReloj() {
 
 // Actualizar el reloj cada segundo
 setInterval(actualizarReloj, 1000);
+
+        // Selección de elementos
+const toggleMenu = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+// Evento para mostrar/ocultar el menú
+toggleMenu.addEventListener('click', () => {
+  menu.classList.toggle('show');
+});
